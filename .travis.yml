@@ -1,6 +1,5 @@
 sudo: required
 language: cpp
-language: fortran
 
 install:
   sudo apt-get install mpich2
