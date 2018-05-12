@@ -1,0 +1,13 @@
+sudo: required
+language: cpp
+language: fortran
+
+install:
+  sudo apt-get install mpich2
+
+script:
+  - mkdir build
+  - cd build
+  - cmake .. -DPAPYRUS_USE_FORTRAN=ON
+  - VERBOSE=1 make
+  - ctest -V
